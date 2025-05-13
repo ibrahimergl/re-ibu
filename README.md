@@ -1,4 +1,4 @@
-e-ibu is a privacy-focused browser extension that automatically redirects popular social media sites to their privacy-friendly alternatives:
+re-ibu is a privacy-focused browser extension that automatically redirects popular social media sites to their privacy-friendly alternatives:
 
     Twitter → Nitter (or custom instance)
     YouTube → Invidious
