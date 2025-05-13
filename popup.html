@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./popup.css" type="text/css" media="all" />
+    <title>Re-ibu - Custom Redirects</title>
+  </head>
+  <body>
+    <header>
+      <h1>Re-ibu</h1>
+      <p class="subtitle">Redirect to privacy-friendly alternative sites</p>
+    </header>
+
+    <form>
+      <!-- Twitter Section -->
+      <fieldset class="service-fieldset">
+        <legend>Twitter</legend>
+        <div class="service-controls">
+          <label class="switch">
+            <input id="switch-twitter" type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+          <span class="service-status">PIN: Off (Default: twitter.com)</span>
+        </div>
+        <div class="suggestion">
+          <span>Suggestion: <a href="https://nitter.net" target="_blank">nitter.net</a></span>
+        </div>
+        <div class="target-domain">
+          <label>Target Domain:</label>
+          <input name="twitter-instance" type="text" placeholder="nitter.net" value="nitter.net" />
+          <button class="use-default" type="button" data-service="twitter">Default</button>
+        </div>
+        <div class="custom-domain">
+          <label>Custom Domain (Optional):</label>
+          <input name="twitter-custom" type="text" placeholder="Enter another domain" />
+        </div>
+      </fieldset>
+
+      <!-- Instagram Section -->
+      <fieldset class="service-fieldset">
+        <legend>Instagram</legend>
+        <div class="service-controls">
+          <label class="switch">
+            <input id="switch-instagram" type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+          <span class="service-status">PIN: Off (Default: instagram.com)</span>
+        </div>
+        <div class="suggestion">
+          <span>Suggestion: <a href="https://imginn.com" target="_blank">imginn.com</a></span>
+        </div>
+        <div class="target-domain">
+          <label>Target Domain:</label>
+          <input name="instagram-instance" type="text" placeholder="imginn.com" value="imginn.com" />
+          <button class="use-default" type="button" data-service="instagram">Default</button>
+        </div>
+        <div class="custom-domain">
+          <label>Custom Domain (Optional):</label>
+          <input name="instagram-custom" type="text" placeholder="Enter another domain" />
+        </div>
+      </fieldset>
+
+      <!-- YouTube Section -->
+      <fieldset class="service-fieldset">
+        <legend>YouTube</legend>
+        <div class="service-controls">
+          <label class="switch">
+            <input id="switch-youtube" type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+          <span class="service-status">PIN: Off (Default: youtube.com)</span>
+        </div>
+        <div class="suggestion">
+          <span>Suggestion: <a href="https://yewtu.be" target="_blank">yewtu.be</a></span>
+        </div>
+        <div class="target-domain">
+          <label>Target Domain:</label>
+          <input name="youtube-instance" type="text" placeholder="yewtu.be" value="yewtu.be" />
+          <button class="use-default" type="button" data-service="youtube">Default</button>
+        </div>
+        <div class="custom-domain">
+          <label>Custom Domain (Optional):</label>
+          <input name="youtube-custom" type="text" placeholder="Enter another domain" />
+        </div>
+      </fieldset>
+
+      <!-- Reddit Section -->
+      <fieldset class="service-fieldset">
+        <legend>Reddit</legend>
+        <div class="service-controls">
+          <label class="switch">
+            <input id="switch-reddit" type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+          <span class="service-status">PIN: Off (Default: reddit.com)</span>
+        </div>
+        <div class="suggestion">
+          <span>Suggestion: <a href="https://old.reddit.com" target="_blank">old.reddit.com</a></span>
+        </div>
+        <div class="target-domain">
+          <label>Target Domain:</label>
+          <input name="reddit-instance" type="text" placeholder="old.reddit.com" value="old.reddit.com" />
+          <button class="use-default" type="button" data-service="reddit">Default</button>
+        </div>
+        <div class="custom-domain">
+          <label>Custom Domain (Optional):</label>
+          <input name="reddit-custom" type="text" placeholder="Enter another domain" />
+        </div>
+      </fieldset>
+
+      <div class="form-bottom">
+        <label class="disable-label">
+          Disable Re-ibu
+          <input id="disable" type="checkbox" />
+        </label>
+        <button class="submit" type="submit">Save Settings</button>
+      </div>
+    </form>
+
+    <script defer src="popup.js"></script>
+  </body>
+</html>

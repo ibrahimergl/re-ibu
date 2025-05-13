@@ -1,0 +1,302 @@
+/* Variables */
+:root {
+  --primary-color: #4a86e8;
+  --primary-hover: #3a76d8;
+  --background-color: #1e1e1e;
+  --card-background: #2d2d2d;
+  --border-color: #444;
+  --text-color: #e0e0e0;
+  --text-secondary: #aaa;
+  --success-color: #34a853;
+  --warning-color: #fbbc05;
+  --error-color: #ea4335;
+  --border-radius: 6px;
+  --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  --transition: all 0.3s ease;
+}
+
+/* Main body styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 12px;
+  min-width: 280px;
+  max-width: 320px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 20px;
+}
+
+.subtitle {
+  margin: 3px 0 0;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+/* Service fieldset styling */
+.service-fieldset {
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  background-color: var(--card-background);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.service-fieldset:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.service-fieldset legend {
+  font-weight: bold;
+  color: var(--primary-color);
+  padding: 0 8px;
+  font-size: 13px;
+}
+
+/* Switch controls styling */
+.service-controls {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.service-status {
+  margin-left: 10px;
+  font-size: 0.85em;
+  color: var(--text-secondary);
+}
+
+/* Suggestion styling */
+.suggestion {
+  margin: 8px 0;
+  padding: 6px;
+  background-color: rgba(74, 134, 232, 0.1);
+  border-radius: var(--border-radius);
+  font-size: 0.85em;
+}
+
+.suggestion a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.suggestion a:hover {
+  text-decoration: underline;
+  color: var(--primary-hover);
+}
+
+/* Domain input sections */
+.target-domain, .custom-domain {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.target-domain label, .custom-domain label {
+  min-width: 100px;
+  margin-right: 8px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+/* Input field styling */
+input[type="text"] {
+  flex-grow: 1;
+  padding: 6px 8px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  background-color: #222;
+  color: var(--text-color);
+  font-size: 12px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(74, 134, 232, 0.2);
+}
+
+/* Highlight effect for target domain when updated */
+@keyframes highlight {
+  0% { background-color: rgba(74, 134, 232, 0.1); }
+  50% { background-color: rgba(74, 134, 232, 0.3); }
+  100% { background-color: #222; }
+}
+
+.highlight-update {
+  animation: highlight 1s ease;
+}
+
+/* Button styles */
+.use-default {
+  margin-left: 6px;
+  padding: 5px 8px;
+  background-color: #333;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 11px;
+}
+
+.use-default:hover {
+  background-color: #444;
+}
+
+.form-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color);
+}
+
+.disable-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.disable-label input {
+  margin-left: 6px;
+}
+
+.submit {
+  padding: 7px 14px;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  font-size: 12px;
+}
+
+.submit:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* Switch styles */
+.switch {
+  --switch-height: 1rem;
+  --switch-width: 2rem;
+  --switch-padding-h: 0.15rem;
+  --switch-padding-v: 0.08rem;
+  --slider-diameter: calc(var(--switch-width) / 2 - var(--switch-padding-h));
+  --slider-transition: calc(
+    var(--switch-width) - var(--slider-diameter) - 2 * var(--switch-padding-h)
+  );
+  position: relative;
+  display: inline-block;
+  width: var(--switch-width);
+  height: var(--switch-height);
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: calc(var(--switch-height) / 2);
+  background-color: #555;
+  transition: 0.3s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--slider-diameter);
+  width: var(--slider-diameter);
+  left: var(--switch-padding-h);
+  top: var(--switch-padding-v);
+  border-radius: 50%;
+  background-color: white;
+  transition: 0.3s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.switch input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(var(--slider-transition));
+}
+
+/* Success message */
+.success-message {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--success-color);
+  color: white;
+  padding: 8px 15px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease;
+  z-index: 100;
+  font-size: 12px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, 10px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 320px) {
+  body {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .target-domain, .custom-domain {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .target-domain label, .custom-domain label {
+    margin-bottom: 4px;
+  }
+
+  .use-default {
+    margin: 6px 0 0 0;
+  }
+
+  .service-fieldset {
+    padding: 10px;
+  }
+}
